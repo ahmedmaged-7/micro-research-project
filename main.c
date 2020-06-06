@@ -158,7 +158,17 @@ struct room room1={1,"0000",0,0};//initalize the room to no 1
 	struct room room3={1,"0000",0,0};//equals 0000
 	struct room room4={1,"0000",0,0};//status
 	struct room room5={1,"0000",0,0};
-int main(void){ 
+
+	
+	void open_lock(struct room room1){
+if(room1.doorstatus==1){
+//this should open solenoid lock 
+}
+
+}
+	
+	
+	int main(void){ 
 uartinit();	
 room1.roomno=UART_InInt();
 
@@ -200,7 +210,13 @@ if(roomno==room4.roomno)room3=checkpass(room4);
 if(roomno==room5.roomno)room5=checkpass(room5);
 }
 
-}
+open_lock(room1);
+open_lock(room2);
+open_lock(room3);
+open_lock(room4);
+open_lock(room5);
+		
+		}
 }
 	
 
